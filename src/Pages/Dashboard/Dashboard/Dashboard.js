@@ -27,8 +27,7 @@ const Dashboard = () => {
         <div className="d-flex" id="wrapper">
             {/* Sidebar */}
             <div className="bg-white" id="sidebar-wrapper">
-                <div className="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
-                    className="fas fa-user-secret me-2"></i>ARYAN LOOK</div>
+                <div className="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">ARYAN LOOK</div>
                 <div className="list-group list-group-flush my-3">
 
                     {/* <Link href="#" className="list-group-item list-group-item-action bg-transparent second-text active"><i
@@ -64,6 +63,8 @@ const Dashboard = () => {
                         </>
                     }
 
+
+
                     <Link to="/home" className="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
                         className="fas fa-power-off me-2"></i><span onClick={logOut}>Logout</span></Link>
                 </div>
@@ -87,10 +88,7 @@ const Dashboard = () => {
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item dropdown">
                                 <li><i className="fas fa-user me-2"></i> {user.displayName}</li>
-                                {/* <Link className="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i className="fas fa-user me-2"></i>John Doe
-                                </Link> */}
+
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><Link className="dropdown-item" href="#">Profile</Link></li>
                                     <li><Link className="dropdown-item" href="#">Settings</Link></li>
@@ -102,7 +100,7 @@ const Dashboard = () => {
                 </nav>
 
                 {/* Content Goes Here */}
-                <div className="container-fluid px-4">
+                <div className="container-fluid px-4" style={{ backgroundColor: 'rgba(149, 165, 166,0.2)' }}>
                     <div className="row g-3">
                         <Switch>
                             <Route exact path={path}>

@@ -6,7 +6,7 @@ import Header from '../Shared/Header/Header';
 const ManageAllOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/order`)
+        fetch(`https://polar-springs-09638.herokuapp.com/order`)
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, []);
@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://polar-springs-09638.herokuapp.com/order/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -34,7 +34,7 @@ const ManageAllOrders = () => {
     const handleStatusUpdate = id => {
         const proceed = window.confirm('Are you sure, you want to update the status?');
         if (proceed) {
-            fetch(`http://localhost:5000/order/status/${id}`, {
+            fetch(`https://polar-springs-09638.herokuapp.com/order/status/${id}`, {
                 method: 'PUT'
             })
                 .then(res => res.json())

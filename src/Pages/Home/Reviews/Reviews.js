@@ -3,7 +3,7 @@ import Rating from 'react-rating';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
-    fetch('http://localhost:5000/review')
+    fetch('https://polar-springs-09638.herokuapp.com/review')
         .then(res => res.json())
         .then(data => setReviews(data))
     return (

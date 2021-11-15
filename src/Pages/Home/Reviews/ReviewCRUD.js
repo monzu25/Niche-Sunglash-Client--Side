@@ -11,7 +11,7 @@ const ReviewCRUD = () => {
     const [myReview, setMyReview] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review/${user.email}`)
+        fetch(`https://polar-springs-09638.herokuapp.com/review/${user.email}`)
             .then(res => res.json())
             .then(data => setMyReview(data))
     }, [])
@@ -32,7 +32,7 @@ const ReviewCRUD = () => {
         review.rating = rating;
         review.userReview = userReview;
 
-        fetch(`http://localhost:5000/review/add`, {
+        fetch(`https://polar-springs-09638.herokuapp.com/review/add`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(review)

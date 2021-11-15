@@ -34,7 +34,7 @@ const Login = () => {
         <div className="container-fluid">
             <div className="row login-info d-flex align-items-center">
                 <div className="col-md-6 col-lg-3 col-sm-6 mx-auto bg-white rounded py-5 px-4">
-                    <NavLink to="/home" className="text-decoration-none"><i class="fas fa-long-arrow-alt-left"></i> Back To Home</NavLink>
+                    <NavLink to="/home" className="text-decoration-none">Back To Shop</NavLink>
                     <h4 className="text-center py-4">Login</h4>
                     <form onSubmit={handleLoginSubmit}>
                         <div class="input-group mb-3">
@@ -50,7 +50,7 @@ const Login = () => {
                             <input type="password" onBlur={handleOnBlur} name="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" />
                         </div>
                         <div className="text-center">
-                            <input className="mx-auto w-100 btn btn-danger" type="submit" value="Login" />
+                            <input className="mx-auto w-100 btn bg-success p-2 text-white bg-opacity-75" type="submit" value="Login" />
                         </div>
                     </form>
                     <p className="text-center my-3">Or</p>

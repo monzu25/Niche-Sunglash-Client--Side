@@ -7,7 +7,7 @@ const Orders = () => {
     const { user } = useAuth();
     const [myOrder, setMyOrder] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/order/${user.email}`)
+        fetch(`https://polar-springs-09638.herokuapp.com/order/${user.email}`)
             .then(res => res.json())
             .then(data => setMyOrder(data));
     }, []);
@@ -16,7 +16,7 @@ const Orders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://polar-springs-09638.herokuapp.com/order/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

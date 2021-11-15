@@ -30,7 +30,7 @@ const Register = () => {
         <div className="container-fluid">
             <div className="row login-info d-flex align-items-center">
                 <div className="col-md-6 col-lg-3 col-sm-6 mx-auto bg-white rounded p-5">
-                    <NavLink to="/home" className="text-decoration-none"><i className="fas fa-long-arrow-alt-left"></i> Back To Home</NavLink>
+                    <NavLink to="/home" className="text-decoration-none">Back To Shop</NavLink>
                     <h4 className="text-center py-3">Sign Up</h4>
                     {
                         user.email
@@ -47,9 +47,9 @@ const Register = () => {
                     {!isLoading &&
                         <form onSubmit={handleRegistrationSubmit}>
                             <div className="mb-3">
-                            <label for="exampleFormControlInput1" className="form-label">Name</label>
-                            <input onChange={handleOnChange} name="name" type="Text" className="form-control" id="exampleFormControlInput1" />
-                        </div>
+                                <label for="exampleFormControlInput1" className="form-label">Name</label>
+                                <input onChange={handleOnChange} name="name" type="Text" className="form-control" id="exampleFormControlInput1" />
+                            </div>
                             <div className="mb-3">
                                 <label for="exampleFormControlInput1" className="form-label">Email address</label>
                                 <input onChange={handleOnChange} name="email" type="email" className="form-control" id="exampleFormControlInput1" />
@@ -63,7 +63,7 @@ const Register = () => {
                                 <input onChange={handleOnChange} name="password2" type="password" className="form-control" id="exampleFormControlInput1" />
                             </div>
                             <div className="text-center">
-                                <Button className="btn btn-danger w-100" type="submit">Sign Up</Button>
+                                <Button className="btn bg-success p-2 text-white bg-opacity-75 w-100" type="submit">Sign Up</Button>
                             </div>
                         </form>
                     }

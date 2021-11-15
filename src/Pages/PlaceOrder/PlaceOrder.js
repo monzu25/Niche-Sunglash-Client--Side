@@ -14,7 +14,7 @@ const PlaceOrder = () => {
     const [selectedProduct, setSelectedProduct] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/${getId}`;
+        const url = `https://polar-springs-09638.herokuapp.com/products/${getId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -41,7 +41,7 @@ const PlaceOrder = () => {
             alert('Already added this item on cart.');
         }
         else {
-            fetch('http://localhost:5000/order/add', {
+            fetch('https://polar-springs-09638.herokuapp.com/order/add', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(product)
