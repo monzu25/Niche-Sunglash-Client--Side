@@ -3,6 +3,8 @@ import { Button } from 'react-bootstrap';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 
+
+
 const ManageAllOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
     useEffect(() => {
@@ -12,7 +14,10 @@ const ManageAllOrders = () => {
     }, []);
 
     // Delete an order form my order
-    const handleDelete = id => {
+
+
+
+    const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
             const url = `https://polar-springs-09638.herokuapp.com/order/${id}`;
@@ -25,13 +30,18 @@ const ManageAllOrders = () => {
                         alert('Deleted');
                         const remainingOrders = allOrders.filter(single => single._id !== id);
                         setAllOrders(remainingOrders);
+
                     }
+
+
                 })
         }
+
+
     };
 
     // Update Order Status
-    const handleStatusUpdate = id => {
+    const handleStatusUpdate = (id) => {
         const proceed = window.confirm('Are you sure, you want to update the status?');
         if (proceed) {
             fetch(`https://polar-springs-09638.herokuapp.com/order/status/${id}`, {
@@ -43,10 +53,14 @@ const ManageAllOrders = () => {
                         alert('Status Updated');
                         const remainingOrders = allOrders.filter(single => single._id === id);
                         setAllOrders(remainingOrders);
+
                     }
+
                 })
         }
-    }
+
+
+    };
 
     return (
         <>
