@@ -42,7 +42,7 @@ const ProductDetails = () => {
                                     </Rating>
                                 </div>
                             </div>
-                            <Link to={`/placeOrder/${product?._id}`} className="btn btn-danger text-white"><i className="fas fa-cart-plus"></i> Buy Now</Link>
+                            <Link to={`/placeOrder/${product?._id}`} className="btn bg-success p-2 text-white bg-opacity-75 text-white"><i className="fas fa-cart-plus"></i> Buy Now</Link>
                         </div>
                         <div className="col-md-6 d-flex justify-content-center">
                             <img className="rounded w-75" src={product?.img} alt="" />

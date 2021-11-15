@@ -87,7 +87,7 @@ const PlaceOrder = () => {
                                 <input ref={phoneRef} type="text" className="form-control" id="exampleFormControlInput1" />
                             </div>
                         </form>
-                        <Link to={'/thankyou'}><Button className="btn btn-danger text-white w-100" onClick={() => addToCart(product)}><i className="fas fa-cart-plus"></i> Place Order</Button></Link>
+                        <Link to={'/thankyou'}><Button className="btn bg-success p-2 text-white bg-opacity-75 text-white w-100" onClick={() => addToCart(product)}><i className="fas fa-cart-plus"></i> Place Order</Button></Link>
                     </div>
                 </div>
             </div>

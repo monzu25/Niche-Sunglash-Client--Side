@@ -46,7 +46,7 @@ const MakeAdmin = () => {
                                 <input type="email" onBlur={handleOnBlur} name="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" />
                             </div>
                             <div className="text-center">
-                                <input className="mx-auto w-100 btn btn-danger" type="submit" value="Set As Admin" />
+                                <input className="mx-auto w-100 btn bg-success p-2 text-white bg-opacity-75" type="submit" value="Set As Admin" />
                             </div>
                         </form>
                     </div>

@@ -57,7 +57,7 @@ const Header = () => {
                                     ?
                                     <>
                                         <Nav.Link as={Link} to="/dashboard"><span className="text-white">Dashboard</span></Nav.Link>
-                                        <Button onClick={logOut} className="btn btn-danger text-white">LogOut</Button>
+                                        <Button onClick={logOut} className="btn bg-success p-2 text-white bg-opacity-75 text-white">LogOut</Button>
 
                                     </>
                                     :

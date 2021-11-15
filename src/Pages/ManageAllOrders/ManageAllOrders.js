@@ -71,11 +71,11 @@ const ManageAllOrders = () => {
                                 >
                                     {/* <th>1</th> */}
                                     <td>{singleOrder.title}</td>
-                                    <td>{singleOrder.price}</td>
+                                    <td> $ {singleOrder.price}</td>
                                     <td><img style={{ width: '100px', height: 'auto' }} src={singleOrder.img} alt="" /></td>
                                     <td>{singleOrder.status}</td>
-                                    <td><Button onClick={() => handleStatusUpdate(singleOrder._id)} className="btn btn-success btn-sm">Confirm</Button></td>
-                                    <td><Button onClick={() => handleDelete(singleOrder._id)} className="btn btn-danger btn-sm">Delete</Button></td>
+                                    <td><Button onClick={() => handleStatusUpdate(singleOrder._id)} className="btn bg-success p-1 text-white bg-opacity-75 btn-sm">Confirm</Button></td>
+                                    <td><Button onClick={() => handleDelete(singleOrder._id)} className="btn btn-danger p-1 btn-sm">Delete</Button></td>
                                 </tr>)
                             }
                         </tbody>
