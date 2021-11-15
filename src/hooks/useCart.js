@@ -7,7 +7,7 @@ const useCart = () => {
     const [selectedProduct, setSelectedProduct] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cart/${uid}`)
+        fetch(`http://localhost:3000/cart/${uid}`)
             .then(res => res.json())
             .then(data => {
                 if (data.length) {
@@ -27,7 +27,7 @@ const useCart = () => {
         }
 
         else {
-            fetch(`http://localhost:5000/cart/add`, {
+            fetch(`http://localhost:3000/cart/add`, {
                 method: 'POST',
                 'content-type': 'application/json',
                 body: JSON.stringify(product)
