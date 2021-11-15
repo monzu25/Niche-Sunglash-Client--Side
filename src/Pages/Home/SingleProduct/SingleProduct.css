@@ -1,0 +1,9 @@
+.my-button{
+    background-color: #EA2027;
+    border: 2px solid transparent;
+    color: #ffffff;
+}
+.my-button:hover{
+    background-color: transparent;
+    border: 2px solid #273c75;
+}
